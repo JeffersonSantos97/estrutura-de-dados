@@ -2,19 +2,58 @@ package com.jefferson.estruturadados.array;
 
 public class VetorTreino {
 
-    private String[] frutas;
+
+    private String[] carrinhoFrutas;
     private int tamanho;
 
     public VetorTreino(int capacidade){
 
-        this.frutas = new String[capacidade];
-        this.tamanho = 0;
+        carrinhoFrutas = new String[capacidade];
+        this.tamanho = tamanho;
     }
 
-   public boolean adicionar(String fruta){
+    public boolean adiciona(String fruta){
 
-        this.frutas[this.tamanho] = fruta;
-        this.tamanho++;
-        return true;
-   }
+        if(this.tamanho < this.carrinhoFrutas.length){
+
+           carrinhoFrutas[tamanho] = fruta;
+           tamanho++;
+           return true;
+        }
+
+        return false;
+    }
+
+    public int getTamanho(){
+        return this.tamanho;
+    }
+
+
+    public String toString(){
+
+        StringBuilder s = new StringBuilder();
+
+        s.append("[");
+        for(int i = 0; i < tamanho - 1; i++){
+
+            s.append(this.carrinhoFrutas[i]);
+            s.append(",");
+        }
+
+        if(tamanho > 0) {
+
+            s.append("]");
+        }
+
+        return s.toString();
+    }
+
+    public String buscar(int posicao){
+
+        if(posicao >=0 && posicao < tamanho) {
+            return carrinhoFrutas[posicao - 1];
+        }
+
+        return "POSICAO INVALIDA";
+    }
 }

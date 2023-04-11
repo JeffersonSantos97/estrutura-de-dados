@@ -72,6 +72,7 @@ public class Vetor {
         throw new IllegalArgumentException("POSICAO INVALIDA");
     }
 
-        return this.elementos[posicao];
+        return this.elementos[posicao - 1];
+    // esse ( - 1 ) é pra que o usuario não precise saber que a primeira posicao é o 0;
     }
 }
