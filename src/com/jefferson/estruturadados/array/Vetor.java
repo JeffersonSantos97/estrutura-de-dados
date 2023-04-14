@@ -66,6 +66,7 @@ public class Vetor {
 
     // INICIO BUSCAR ELEMENTOS DE UMA POISIÇÃO //
 
+
     public String busca(int posicao) {
     if(!(posicao >=0 && posicao < tamanho)) {
 
@@ -74,5 +75,42 @@ public class Vetor {
 
         return this.elementos[posicao - 1];
     // esse ( - 1 ) é pra que o usuario não precise saber que a primeira posicao é o 0;
+    }
+
+    // INICIO verificar se elemento existe no vetor
+
+    public int buscarElemento(String elemento){
+
+        for(int i = 0; i < this.tamanho; i++) {
+
+            if(elementos[i].equalsIgnoreCase(elemento)){
+
+                return i; // retornar a posição do elemento
+            }
+        }
+
+        return -1; // significa que não tem o elemento no vetor
+    }
+
+    // FIM de verificar se o elemento existe no Vetor
+
+    /* INICIO colocar o elemento em qualquer posicao */
+
+    public boolean adiciona(int posicao, String elemento){
+
+        if(posicao >=0 && posicao < tamanho){
+            throw new IllegalArgumentException("POSICAO INVALIDA");
+        }
+        // mover todas as posiçoes
+        for(int i = this.tamanho -1; i <= posicao; i--){
+
+            this.elementos[i+1] = this.elementos[i];
+
+        }
+        this.elementos[posicao] = elemento;
+        this.tamanho++;
+
+
+        return true;
     }
 }

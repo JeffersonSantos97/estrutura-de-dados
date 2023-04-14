@@ -6,19 +6,18 @@ public class ExerTeste {
 
     public static void main(String[] args) {
 
+        VetorTreino vetor = new VetorTreino(10);
 
-        VetorTreino vetor = new VetorTreino(5);
-
-        vetor.adiciona("Jefferson");
-        vetor.adiciona("Beatriz");
-        vetor.adiciona("Nala");
-        vetor.adiciona("Akin");
-        vetor.adiciona("Heru");
+        vetor.adiciona("Feijão");
+        vetor.adiciona("Arroz");
+        vetor.adiciona("Farinha");
 
 
-        System.out.println(vetor);
+        System.out.println(vetor.buscaDaPosicao(2));
 
-        System.out.println(vetor.buscar(6));
+        System.out.println(vetor.verificarProduto("Arroz"));
+
+
 
 
     }

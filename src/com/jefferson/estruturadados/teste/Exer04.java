@@ -18,5 +18,6 @@ public class Exer04 {
 
         System.out.println(vetor.busca(1));
 
+
     }
 }
