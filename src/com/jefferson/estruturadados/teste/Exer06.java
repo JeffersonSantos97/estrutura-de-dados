@@ -16,7 +16,7 @@ public class Exer06 {
 
 
 
-        System.out.println(vetor.buscarElemento("elemento10"));  // return -1
-        System.out.println( vetor.buscarElemento("elemento3")); // return 2
+       // System.out.println(vetor.buscarElemento("elemento10"));  // return -1
+       //  System.out.println( vetor.buscarElemento("elemento3")); // return 2
     }
 }
